@@ -13,9 +13,15 @@
 - **COP31: exit fossil fuels** — the draft deal at the UN climate summit in Antalya urges 'accelerated action' to quit oil, gas and coal.
 - **Trump, Xi & Putin converge on Shenzhen** — a first three-way summit looms as APEC gathers in China.
 
+An **Also Today** strip along the bottom adds three more fields of the day, one line each:
+
+- **Global markets** — stocks slide a fourth day in the AI sell-off; Europe's STOXX 600 falls 1.75%, its worst day since March.
+- **Technology** — Isomorphic Labs raises $5bn to take its AI-designed drugs into clinical trials.
+- **Space** — a power-free 50-gram laser mirror keeps dead satellites trackable from the ground, easing the debris threat.
+
 ## How it was made
 
-The page was composed as a single HTML document (`build/page.html`) with every panel drawn as flat inline SVG — the bridge and its drone swarm, the grounded airliners, the burning tanker, the EU stars and the map of Africa, the factory and the globe, the Shenzhen skyline and its three flags — then rendered to PNG at exactly 1024×1024 with headless Chromium (`build/render.mjs`). No photographs and no stock art: every mark in the picture is drawn by the entry's own code, and all type is set in the page so nothing is garbled. `main.ts` (Node 22, standard library only) copies the finished `entry.png` into the output directory, byte for byte, so the graded run is deterministic.
+The page was composed as a single HTML document (`build/page.html`) with every panel drawn as a flat inline SVG scene — the bridge with its drone swarm, stopped traffic and a distant Kyiv skyline under the answer strikes; the grounded airliners at their terminal with baggage carts and a fuel truck; the burning tanker, the Bahrain radar dome and a warship in the strait; the EU stars, the route across Africa and the reception centre below the Rwanda pin; the globe, the struck-through factory, wind turbines and solar panels; the Shenzhen skyline, its three flags and the harbour — then rendered to PNG at exactly 1024×1024 with headless Chromium (`build/render.mjs`). No photographs and no stock art: every mark in the picture is drawn by the entry's own code, and all type is set in the page so nothing is garbled. `main.ts` (Node 22, standard library only) copies the finished `entry.png` into the output directory, byte for byte, so the graded run is deterministic.
 
 ## Run it
 

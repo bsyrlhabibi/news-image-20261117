@@ -12,10 +12,10 @@
     font-family: 'Liberation Sans', 'DejaVu Sans', sans-serif;
     overflow: hidden;
   }
-  .page { height: 100%; padding: 16px 30px 12px; display: flex; flex-direction: column; }
+  .page { height: 100%; padding: 11px 30px 10px; display: flex; flex-direction: column; }
 
   /* ---------- masthead ---------- */
-  header { border-top: 5px solid #171310; padding-top: 10px; }
+  header { border-top: 5px solid #171310; padding-top: 9px; }
   .kicker {
     display: flex; justify-content: space-between; align-items: baseline;
     font-size: 13.5px; font-weight: 700; letter-spacing: 3.5px;
@@ -23,22 +23,22 @@
   .kicker .brand { color: #b3232a; }
   .kicker .tag { font-size: 12.5px; letter-spacing: 2.5px; color: #4a4234; }
   .dow {
-    margin-top: 6px;
+    margin-top: 5px;
     font-family: 'Liberation Serif', 'DejaVu Serif', serif;
-    font-size: 23px; font-weight: 700; letter-spacing: 14px; color: #b3232a;
+    font-size: 22px; font-weight: 700; letter-spacing: 14px; color: #b3232a;
   }
   h1.date {
     font-family: 'Liberation Serif', 'DejaVu Serif', serif;
-    font-size: 74px; font-weight: 700; line-height: 0.98; letter-spacing: 1px;
+    font-size: 71px; font-weight: 700; line-height: 0.98; letter-spacing: 1px;
     white-space: nowrap;
   }
-  .rule { border-top: 2.5px solid #171310; border-bottom: 6px solid #171310; height: 5px; margin-top: 8px; }
+  .rule { border-top: 2.5px solid #171310; border-bottom: 6px solid #171310; height: 5px; margin-top: 7px; }
 
   /* ---------- panels ---------- */
   .panel { border: 2.5px solid #171310; background: #fffdf6; display: flex; flex-direction: column; }
   .scene { width: 100%; overflow: hidden; }
   .scene svg { display: block; width: 100%; height: 100%; }
-  .cap { padding: 7px 14px 8px; }
+  .cap { padding: 6px 14px 7px; }
   .dateline {
     display: inline-block; background: #b3232a; color: #fff;
     font-size: 12px; font-weight: 700; letter-spacing: 2px; padding: 3px 8px 2px;
@@ -48,24 +48,39 @@
     font-family: 'Liberation Serif', 'DejaVu Serif', serif;
     font-weight: 700; line-height: 1.04;
   }
-  .sub { color: #3d362a; margin-top: 4px; line-height: 1.25; }
+  .sub { color: #3d362a; margin-top: 3px; line-height: 1.24; }
 
-  .lead { margin-top: 12px; }
-  .lead .headline { font-size: 34px; }
-  .lead .sub { font-size: 15.5px; }
+  .lead { margin-top: 10px; }
+  .lead .headline { font-size: 35px; }
+  .lead .sub { font-size: 15px; }
 
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-  .grid .headline { font-size: 23.5px; }
-  .grid .sub { font-size: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .grid .headline { font-size: 24px; }
+  .grid .sub { font-size: 13.5px; }
 
-  .bottom { margin-top: 10px; flex-direction: row; align-items: stretch; }
+  .bottom { margin-top: 8px; flex-direction: row; align-items: stretch; }
   .bottom .scene { width: 400px; flex: none; }
   .bottom .cap { display: flex; flex-direction: column; justify-content: center; }
-  .bottom .headline { font-size: 26px; }
-  .bottom .sub { font-size: 14.5px; }
+  .bottom .headline { font-size: 25px; }
+  .bottom .sub { font-size: 14px; }
+
+  /* ---------- also today strip ---------- */
+  .alsotoday {
+    margin-top: 8px; border: 2.5px solid #171310; background: #fffdf6;
+    display: flex; align-items: stretch; padding: 6px 14px; gap: 14px;
+  }
+  .at-label {
+    font-family: 'Liberation Serif', 'DejaVu Serif', serif;
+    font-size: 16px; font-weight: 700; line-height: 1.1; color: #b3232a;
+    border-right: 2px solid #171310; padding-right: 13px;
+    display: flex; align-items: center; letter-spacing: 1px;
+  }
+  .at-item { flex: 1; }
+  .at-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 1.8px; color: #b3232a; }
+  .at-item p { font-size: 12.5px; line-height: 1.28; color: #2c2618; margin-top: 2px; }
 
   footer {
-    margin-top: auto; border-top: 2px solid #171310; padding-top: 7px;
+    margin-top: auto; border-top: 2px solid #171310; padding-top: 6px;
     text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2.5px; color: #4a4234;
   }
   footer b { color: #b3232a; }
@@ -77,7 +92,7 @@
   <header>
     <div class="kicker">
       <span class="brand">THE WORLD IN ONE PICTURE</span>
-      <span class="tag">ALL THE NEWS OF ONE DAY · SIX STORIES</span>
+      <span class="tag">ALL THE NEWS OF ONE DAY · NINE STORIES</span>
     </div>
     <div class="dow">TUESDAY</div>
     <h1 class="date">17 NOVEMBER 2026</h1>
@@ -86,58 +101,83 @@
 
   <!-- LEAD: Ukraine strikes the Kerch Bridge -->
   <section class="panel lead">
-    <div class="scene" style="height:138px">
-      <svg viewBox="0 0 960 166" preserveAspectRatio="none">
+    <div class="scene" style="height:104px">
+      <svg viewBox="0 0 960 128" preserveAspectRatio="none">
         <defs>
           <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#f6a94f"/>
             <stop offset="1" stop-color="#f9dc9a"/>
           </linearGradient>
         </defs>
-        <rect x="0" y="0" width="960" height="104" fill="url(#dusk)"/>
-        <circle cx="828" cy="34" r="21" fill="#fff3c2"/>
-        <rect x="0" y="104" width="960" height="62" fill="#2e6da4"/>
+        <rect x="0" y="0" width="960" height="84" fill="url(#dusk)"/>
+        <circle cx="836" cy="28" r="19" fill="#fff3c2"/>
+        <rect x="0" y="84" width="960" height="44" fill="#2e6da4"/>
         <g stroke="#cfe4f5" stroke-width="2.5" opacity="0.75">
-          <line x1="60" y1="126" x2="128" y2="126"/><line x1="240" y1="142" x2="318" y2="142"/>
-          <line x1="470" y1="122" x2="540" y2="122"/><line x1="660" y1="146" x2="742" y2="146"/>
-          <line x1="820" y1="128" x2="896" y2="128"/><line x1="150" y1="152" x2="214" y2="152"/>
+          <line x1="60" y1="102" x2="128" y2="102"/><line x1="240" y1="114" x2="318" y2="114"/>
+          <line x1="470" y1="98" x2="540" y2="98"/><line x1="660" y1="118" x2="742" y2="118"/>
+          <line x1="820" y1="104" x2="896" y2="104"/><line x1="150" y1="122" x2="214" y2="122"/>
         </g>
+        <!-- distant Kyiv skyline, far shore -->
+        <g fill="#8a5a34" opacity="0.85">
+          <rect x="872" y="58" width="12" height="26"/><rect x="888" y="50" width="10" height="34"/>
+          <rect x="902" y="62" width="14" height="22"/><rect x="920" y="54" width="9" height="30"/>
+          <rect x="933" y="64" width="12" height="20"/><rect x="949" y="58" width="11" height="26"/>
+        </g>
+        <!-- flash + smoke over Kyiv: the answer strikes -->
+        <polygon points="906,34 909,43 918,41 911,48 917,54 908,52 905,60 902,52 894,53 900,47 895,41 903,43" fill="#f06423"/>
+        <circle cx="912" cy="24" r="7" fill="#83868c" opacity="0.8"/>
+        <circle cx="920" cy="16" r="5" fill="#83868c" opacity="0.7"/>
         <!-- drone swarm -->
         <g fill="#22252a">
-          <path d="M120 30 l7 12 l-7 -3 l-7 3 Z"/><path d="M196 18 l7 12 l-7 -3 l-7 3 Z"/>
-          <path d="M268 40 l7 12 l-7 -3 l-7 3 Z"/><path d="M338 20 l7 12 l-7 -3 l-7 3 Z"/>
-          <path d="M402 44 l7 12 l-7 -3 l-7 3 Z"/><path d="M452 24 l7 12 l-7 -3 l-7 3 Z"/>
-          <path d="M158 56 l6 10 l-6 -2 l-6 2 Z"/><path d="M306 62 l6 10 l-6 -2 l-6 2 Z"/>
-          <path d="M420 66 l6 10 l-6 -2 l-6 2 Z"/><path d="M96 62 l6 10 l-6 -2 l-6 2 Z"/>
+          <path d="M120 26 l7 12 l-7 -3 l-7 3 Z"/><path d="M196 14 l7 12 l-7 -3 l-7 3 Z"/>
+          <path d="M268 34 l7 12 l-7 -3 l-7 3 Z"/><path d="M338 16 l7 12 l-7 -3 l-7 3 Z"/>
+          <path d="M402 38 l7 12 l-7 -3 l-7 3 Z"/><path d="M452 20 l7 12 l-7 -3 l-7 3 Z"/>
+          <path d="M158 48 l6 10 l-6 -2 l-6 2 Z"/><path d="M306 54 l6 10 l-6 -2 l-6 2 Z"/>
+          <path d="M420 58 l6 10 l-6 -2 l-6 2 Z"/><path d="M96 54 l6 10 l-6 -2 l-6 2 Z"/>
+          <path d="M238 52 l5 9 l-5 -2 l-5 2 Z"/><path d="M368 48 l5 9 l-5 -2 l-5 2 Z"/>
+          <path d="M52 34 l6 10 l-6 -2 l-6 2 Z"/><path d="M486 44 l5 9 l-5 -2 l-5 2 Z"/>
         </g>
         <g stroke="#22252a" stroke-width="1.6" stroke-dasharray="2 5" opacity="0.65">
-          <line x1="120" y1="44" x2="470" y2="88"/><line x1="268" y1="54" x2="486" y2="90"/>
-          <line x1="402" y1="58" x2="498" y2="90"/><line x1="196" y1="32" x2="462" y2="86"/>
+          <line x1="120" y1="38" x2="470" y2="70"/><line x1="268" y1="46" x2="486" y2="72"/>
+          <line x1="402" y1="50" x2="498" y2="72"/><line x1="196" y1="26" x2="462" y2="68"/>
         </g>
         <!-- bridge -->
         <g stroke="#22252a" fill="none">
-          <path d="M310 34 Q240 84 150 98" stroke-width="2.5"/>
-          <path d="M310 34 Q390 84 462 96" stroke-width="2.5"/>
-          <path d="M650 34 Q590 84 566 94" stroke-width="2.5"/>
-          <path d="M650 34 Q740 84 850 98" stroke-width="2.5"/>
+          <path d="M310 28 Q240 68 150 80" stroke-width="2.5"/>
+          <path d="M310 28 Q390 68 462 78" stroke-width="2.5"/>
+          <path d="M650 28 Q590 68 566 76" stroke-width="2.5"/>
+          <path d="M650 28 Q740 68 850 80" stroke-width="2.5"/>
         </g>
-        <rect x="304" y="30" width="11" height="72" fill="#22252a"/>
-        <rect x="644" y="30" width="11" height="72" fill="#22252a"/>
-        <rect x="0" y="96" width="468" height="9" fill="#22252a"/>
-        <rect x="560" y="96" width="400" height="9" fill="#22252a"/>
-        <rect x="486" y="112" width="58" height="8" fill="#22252a" transform="rotate(24 515 116)"/>
+        <rect x="304" y="24" width="11" height="58" fill="#22252a"/>
+        <rect x="644" y="24" width="11" height="58" fill="#22252a"/>
+        <rect x="0" y="78" width="468" height="9" fill="#22252a"/>
+        <rect x="560" y="78" width="400" height="9" fill="#22252a"/>
+        <rect x="486" y="92" width="58" height="8" fill="#22252a" transform="rotate(24 515 96)"/>
         <g fill="#22252a">
-          <rect x="60" y="80" width="7" height="16"/><rect x="180" y="80" width="7" height="16"/>
-          <rect x="700" y="80" width="7" height="16"/><rect x="830" y="80" width="7" height="16"/>
+          <rect x="60" y="64" width="6" height="14"/><rect x="180" y="64" width="6" height="14"/>
+          <rect x="700" y="64" width="6" height="14"/><rect x="830" y="64" width="6" height="14"/>
+          <rect x="120" y="64" width="6" height="14"/><rect x="760" y="64" width="6" height="14"/>
+        </g>
+        <!-- stopped traffic on the deck -->
+        <g fill="#22252a">
+          <path d="M206 78 v-8 h22 v8 Z"/><rect x="212" y="62" width="12" height="8"/>
+          <path d="M352 78 v-7 h18 v7 Z"/><rect x="357" y="64" width="9" height="7"/>
+          <path d="M742 78 v-8 h24 v8 Z"/><rect x="749" y="62" width="12" height="8"/>
+        </g>
+        <!-- patrol boat + wake -->
+        <g>
+          <path d="M96 108 L150 108 L140 118 L104 118 Z" fill="#22252a"/>
+          <rect x="114" y="100" width="16" height="8" fill="#22252a"/>
+          <path d="M60 116 q18 5 40 2 M52 122 q24 6 52 2" stroke="#cfe4f5" stroke-width="2" fill="none" opacity="0.8"/>
         </g>
         <!-- explosion + smoke -->
         <g>
-          <circle cx="534" cy="56" r="12" fill="#6d7076" opacity="0.75"/>
-          <circle cx="550" cy="40" r="16" fill="#83868c" opacity="0.75"/>
-          <circle cx="568" cy="24" r="11" fill="#83868c" opacity="0.7"/>
-          <polygon points="515,58 524,78 546,72 538,90 560,96 540,104 546,124 526,112 512,128 508,106 486,108 502,94 484,82 506,78 500,58 514,70" fill="#f06423"/>
-          <polygon points="516,74 526,86 540,84 532,96 544,104 526,104 520,116 514,102 500,102 510,92 502,82 514,84" fill="#ffd23e"/>
-          <circle cx="522" cy="94" r="7" fill="#c1272d"/>
+          <circle cx="534" cy="44" r="12" fill="#6d7076" opacity="0.75"/>
+          <circle cx="550" cy="28" r="16" fill="#83868c" opacity="0.75"/>
+          <circle cx="568" cy="14" r="11" fill="#83868c" opacity="0.7"/>
+          <polygon points="515,46 524,64 546,58 538,74 560,80 540,88 546,106 526,94 512,110 508,88 486,90 502,76 484,64 506,60 500,42 514,54" fill="#f06423"/>
+          <polygon points="516,58 526,70 540,68 532,80 544,88 526,88 520,100 514,86 500,86 510,76 502,66 514,68" fill="#ffd23e"/>
+          <circle cx="522" cy="78" r="7" fill="#c1272d"/>
         </g>
       </svg>
     </div>
@@ -152,17 +192,28 @@
 
     <!-- US: nationwide ground stop -->
     <section class="panel">
-      <div class="scene" style="height:102px">
-        <svg viewBox="0 0 472 102" preserveAspectRatio="none">
-          <rect x="0" y="0" width="472" height="80" fill="#bcd7f0"/>
-          <rect x="0" y="80" width="472" height="22" fill="#878d94"/>
+      <div class="scene" style="height:84px">
+        <svg viewBox="0 0 472 100" preserveAspectRatio="none">
+          <rect x="0" y="0" width="472" height="78" fill="#bcd7f0"/>
+          <rect x="0" y="78" width="472" height="22" fill="#878d94"/>
           <g stroke="#f3f5f7" stroke-width="3" stroke-dasharray="16 12">
-            <line x1="120" y1="91" x2="472" y2="91"/>
+            <line x1="120" y1="89" x2="472" y2="89"/>
           </g>
+          <!-- terminal building -->
+          <rect x="120" y="38" width="330" height="40" fill="#aebfcb"/>
+          <rect x="120" y="38" width="330" height="9" fill="#7e93a3"/>
+          <g fill="#dff0ff">
+            <rect x="132" y="54" width="22" height="10"/><rect x="164" y="54" width="22" height="10"/>
+            <rect x="196" y="54" width="22" height="10"/><rect x="228" y="54" width="22" height="10"/>
+            <rect x="292" y="54" width="22" height="10"/><rect x="324" y="54" width="22" height="10"/>
+            <rect x="356" y="54" width="22" height="10"/><rect x="388" y="54" width="22" height="10"/>
+          </g>
+          <!-- jet bridge to first plane -->
+          <path d="M258 52 L206 62 L210 70 L260 62 Z" fill="#5a6672"/>
           <!-- control tower -->
-          <rect x="46" y="34" width="15" height="48" fill="#5a6672"/>
-          <rect x="36" y="20" width="36" height="15" fill="#33424f"/>
-          <rect x="40" y="24" width="28" height="7" fill="#bfe3ff"/>
+          <rect x="46" y="32" width="15" height="48" fill="#5a6672"/>
+          <rect x="36" y="18" width="36" height="15" fill="#33424f"/>
+          <rect x="40" y="22" width="28" height="7" fill="#bfe3ff"/>
           <!-- parked planes -->
           <g fill="#eef1f4" stroke="#33424f" stroke-width="2">
             <path d="M120 66 q6 -8 26 -8 l52 0 q16 0 22 8 q-2 6 -16 6 l-70 0 q-12 0 -14 -6 Z"/>
@@ -172,9 +223,20 @@
             <path d="M252 64 l8 -11 q2 -2 5 0 l1 11 Z"/>
             <path d="M330 72 q4 -5 16 -5 l32 0 q10 0 13 5 q-1 4 -10 4 l-43 0 q-7 0 -8 -4 Z"/>
           </g>
+          <!-- baggage carts + fuel truck -->
+          <g fill="#e8a33d" stroke="#33424f" stroke-width="1.6">
+            <rect x="86" y="70" width="15" height="8"/><rect x="104" y="70" width="15" height="8"/>
+          </g>
+          <g fill="#3f7fbf" stroke="#33424f" stroke-width="1.6">
+            <rect x="356" y="66" width="26" height="10"/><rect x="382" y="70" width="9" height="6"/>
+          </g>
+          <g fill="#263238">
+            <circle cx="92" cy="80" r="3"/><circle cx="112" cy="80" r="3"/>
+            <circle cx="366" cy="78" r="3"/><circle cx="378" cy="78" r="3"/><circle cx="388" cy="78" r="3"/>
+          </g>
           <!-- halt sign -->
-          <circle cx="424" cy="28" r="21" fill="#c1272d"/>
-          <rect x="410" y="24" width="28" height="8" fill="#ffffff"/>
+          <circle cx="424" cy="24" r="20" fill="#c1272d"/>
+          <rect x="411" y="20" width="26" height="8" fill="#ffffff"/>
         </svg>
       </div>
       <div class="cap">
@@ -186,32 +248,51 @@
 
     <!-- Hormuz: US-Iran strikes -->
     <section class="panel">
-      <div class="scene" style="height:102px">
-        <svg viewBox="0 0 472 102" preserveAspectRatio="none">
-          <rect x="0" y="0" width="472" height="102" fill="#2e6da4"/>
-          <path d="M0 0 L472 0 L472 18 Q400 30 340 22 Q250 34 180 24 Q90 32 0 20 Z" fill="#d9b878"/>
-          <path d="M0 102 L0 76 Q70 64 130 76 Q190 86 210 102 Z" fill="#d9b878"/>
-          <ellipse cx="352" cy="30" rx="26" ry="8" fill="#d9b878"/>
+      <div class="scene" style="height:84px">
+        <svg viewBox="0 0 472 100" preserveAspectRatio="none">
+          <rect x="0" y="0" width="472" height="100" fill="#2e6da4"/>
+          <path d="M0 0 L472 0 L472 17 Q400 28 340 20 Q250 32 180 22 Q90 30 0 19 Z" fill="#d9b878"/>
+          <path d="M0 100 L0 74 Q70 62 130 74 Q190 84 210 100 Z" fill="#d9b878"/>
+          <ellipse cx="352" cy="28" rx="26" ry="8" fill="#d9b878"/>
           <g stroke="#ffffff" stroke-width="2" opacity="0.55">
-            <line x1="60" y1="58" x2="96" y2="58"/><line x1="150" y1="84" x2="188" y2="84"/>
-            <line x1="392" y1="66" x2="428" y2="66"/><line x1="286" y1="90" x2="320" y2="90"/>
+            <line x1="60" y1="56" x2="96" y2="56"/><line x1="150" y1="82" x2="188" y2="82"/>
+            <line x1="392" y1="64" x2="428" y2="64"/><line x1="286" y1="88" x2="320" y2="88"/>
           </g>
           <!-- strike arcs -->
-          <path d="M352 22 Q300 2 236 40" fill="none" stroke="#c1272d" stroke-width="2.5" stroke-dasharray="6 5"/>
-          <path d="M120 74 Q170 96 224 66" fill="none" stroke="#c1272d" stroke-width="2.5" stroke-dasharray="6 5"/>
+          <path d="M352 20 Q300 0 236 38" fill="none" stroke="#c1272d" stroke-width="2.5" stroke-dasharray="6 5"/>
+          <path d="M120 72 Q170 94 224 64" fill="none" stroke="#c1272d" stroke-width="2.5" stroke-dasharray="6 5"/>
+          <path d="M196 84 Q130 92 84 80" fill="none" stroke="#c1272d" stroke-width="2.5" stroke-dasharray="6 5"/>
+          <!-- Bahrain radar on the near shore -->
+          <g>
+            <rect x="52" y="66" width="7" height="14" fill="#5a5148"/>
+            <path d="M40 66 a16 12 0 0 1 32 0 Z" fill="#eef1f4" stroke="#5a5148" stroke-width="1.6"/>
+            <polygon points="76,72 82,80 90,78 84,84 88,90 79,86 74,92 73,83 64,82 72,78" fill="#f06423"/>
+          </g>
           <!-- tanker -->
           <g>
-            <path d="M176 62 L292 62 L280 78 L190 78 Z" fill="#263238"/>
-            <rect x="186" y="56" width="96" height="6" fill="#8a2f23"/>
-            <rect x="252" y="42" width="20" height="15" fill="#eef1f4"/>
-            <rect x="206" y="50" width="10" height="7" fill="#45525c"/>
-            <rect x="226" y="50" width="10" height="7" fill="#45525c"/>
+            <path d="M176 60 L292 60 L280 76 L190 76 Z" fill="#263238"/>
+            <rect x="186" y="54" width="96" height="6" fill="#8a2f23"/>
+            <rect x="252" y="40" width="20" height="15" fill="#eef1f4"/>
+            <rect x="206" y="48" width="10" height="7" fill="#45525c"/>
+            <rect x="226" y="48" width="10" height="7" fill="#45525c"/>
           </g>
           <!-- flame on tanker -->
-          <path d="M196 56 q-8 -12 0 -22 q10 10 4 22 q-2 4 -4 0 Z" fill="#f06423"/>
-          <path d="M197 54 q-4 -7 0 -12 q5 6 2 12 q-1 2 -2 0 Z" fill="#ffd23e"/>
+          <path d="M196 54 q-8 -12 0 -22 q10 10 4 22 q-2 4 -4 0 Z" fill="#f06423"/>
+          <path d="M197 52 q-4 -7 0 -12 q5 6 2 12 q-1 2 -2 0 Z" fill="#ffd23e"/>
           <!-- burst on island -->
-          <polygon points="352,14 356,24 366,22 359,30 366,37 355,35 352,45 348,35 338,37 345,29 338,22 349,24" fill="#f06423"/>
+          <polygon points="352,12 356,22 366,20 359,28 366,35 355,33 352,43 348,33 338,35 345,27 338,20 349,22" fill="#f06423"/>
+          <!-- distant second tanker -->
+          <g opacity="0.75">
+            <path d="M368 82 L428 82 L420 92 L376 92 Z" fill="#3d4a54"/>
+            <rect x="392" y="76" width="14" height="6" fill="#6b7885"/>
+          </g>
+          <!-- warship, foreground -->
+          <g>
+            <path d="M16 92 L96 92 L86 100 L26 100 Z" fill="#45525c"/>
+            <rect x="38" y="84" width="26" height="8" fill="#5a6672"/>
+            <rect x="50" y="76" width="6" height="9" fill="#5a6672"/>
+            <line x1="70" y1="84" x2="88" y2="78" stroke="#5a6672" stroke-width="2.5"/>
+          </g>
         </svg>
       </div>
       <div class="cap">
@@ -223,25 +304,41 @@
 
     <!-- EU Rwanda migrant hub -->
     <section class="panel">
-      <div class="scene" style="height:102px">
-        <svg viewBox="0 0 472 102" preserveAspectRatio="none">
-          <rect x="0" y="0" width="472" height="102" fill="#eef3e2"/>
+      <div class="scene" style="height:84px">
+        <svg viewBox="0 0 472 100" preserveAspectRatio="none">
+          <rect x="0" y="0" width="472" height="100" fill="#eef3e2"/>
           <!-- EU disc -->
-          <circle cx="76" cy="51" r="37" fill="#1d4e89"/>
+          <circle cx="76" cy="50" r="36" fill="#1d4e89"/>
           <g fill="#f2c230" font-family="DejaVu Sans" font-size="13" text-anchor="middle">
-            <text x="99" y="56">★</text><text x="95" y="67">★</text><text x="88" y="75">★</text>
-            <text x="76" y="79">★</text><text x="64" y="75">★</text><text x="57" y="67">★</text>
-            <text x="53" y="56">★</text><text x="57" y="45">★</text><text x="64" y="37">★</text>
-            <text x="76" y="33">★</text><text x="88" y="37">★</text><text x="95" y="45">★</text>
+            <text x="99" y="55">★</text><text x="95" y="66">★</text><text x="88" y="74">★</text>
+            <text x="76" y="78">★</text><text x="64" y="74">★</text><text x="57" y="66">★</text>
+            <text x="53" y="55">★</text><text x="57" y="44">★</text><text x="64" y="36">★</text>
+            <text x="76" y="32">★</text><text x="88" y="36">★</text><text x="95" y="44">★</text>
           </g>
-          <!-- arrow -->
-          <path d="M126 38 Q230 2 356 40" fill="none" stroke="#b3232a" stroke-width="3" stroke-dasharray="7 6"/>
-          <polygon points="356,40 340,36 346,50" fill="#b3232a"/>
+          <!-- route -->
+          <path d="M126 36 Q230 0 356 38" fill="none" stroke="#b3232a" stroke-width="3" stroke-dasharray="7 6"/>
+          <polygon points="356,38 340,34 346,48" fill="#b3232a"/>
+          <!-- plane mid-route -->
+          <g fill="#33424f" transform="translate(238,10) rotate(14)">
+            <path d="M0 6 L26 6 L34 10 L26 13 L0 12 L4 9 Z"/>
+            <path d="M8 6 L13 -3 L17 -3 L16 6 Z"/>
+            <path d="M8 12 L13 19 L17 19 L16 12 Z"/>
+          </g>
           <!-- Africa -->
-          <path d="M316 16 L344 8 L372 13 L396 10 L412 22 L416 38 L434 46 L430 60 L414 66 L408 80 L398 94 L384 99 L372 90 L366 74 L352 66 L334 68 L322 60 L298 60 L288 47 L284 31 L292 19 Z" fill="#3e8e4f"/>
+          <path d="M316 15 L344 7 L372 12 L396 9 L412 21 L416 37 L434 45 L430 59 L414 65 L408 79 L398 93 L384 98 L372 89 L366 73 L352 65 L334 67 L322 59 L298 59 L288 46 L284 30 L292 18 Z" fill="#3e8e4f"/>
+          <path d="M330 24 q14 -6 22 2 q-2 10 -14 10 q-12 -2 -8 -12 Z" fill="#35793f" opacity="0.7"/>
+          <path d="M392 70 q12 -2 14 8 q-4 10 -14 8 q-8 -6 0 -16 Z" fill="#35793f" opacity="0.7"/>
+          <!-- lake west of the pin -->
+          <ellipse cx="368" cy="48" rx="9" ry="14" fill="#7db8d9" transform="rotate(18 368 48)"/>
           <!-- Rwanda pin -->
-          <path d="M398 44 q10 12 0 22 q-10 -10 0 -22 Z" fill="#c1272d"/>
-          <circle cx="398" cy="53" r="3.6" fill="#ffffff"/>
+          <path d="M398 42 q10 12 0 22 q-10 -10 0 -22 Z" fill="#c1272d"/>
+          <circle cx="398" cy="51" r="3.6" fill="#ffffff"/>
+          <!-- reception centre below the pin -->
+          <g>
+            <rect x="382" y="76" width="34" height="15" fill="#e8e2d2" stroke="#5a5148" stroke-width="1.6"/>
+            <polygon points="378,76 420,76 399,65" fill="#8a2f23"/>
+            <rect x="395" y="82" width="8" height="9" fill="#5a5148"/>
+          </g>
         </svg>
       </div>
       <div class="cap">
@@ -253,34 +350,49 @@
 
     <!-- COP31 fossil fuel exit -->
     <section class="panel">
-      <div class="scene" style="height:102px">
-        <svg viewBox="0 0 472 102" preserveAspectRatio="none">
-          <rect x="0" y="0" width="472" height="102" fill="#e9f3e6"/>
+      <div class="scene" style="height:84px">
+        <svg viewBox="0 0 472 100" preserveAspectRatio="none">
+          <rect x="0" y="0" width="472" height="100" fill="#e9f3e6"/>
           <!-- globe -->
-          <circle cx="112" cy="53" r="38" fill="#3a7bd5"/>
-          <path d="M88 32 q16 -10 26 2 q-4 10 -16 10 q-14 0 -10 -12 Z" fill="#3e8e4f"/>
-          <path d="M118 58 q14 -4 20 6 q2 12 -8 16 q-12 2 -14 -8 q0 -10 2 -14 Z" fill="#3e8e4f"/>
-          <path d="M82 62 q8 -2 10 6 q-2 8 -10 6 q-6 -4 0 -12 Z" fill="#3e8e4f"/>
+          <circle cx="112" cy="52" r="37" fill="#3a7bd5"/>
+          <path d="M88 31 q16 -10 26 2 q-4 10 -16 10 q-14 0 -10 -12 Z" fill="#3e8e4f"/>
+          <path d="M118 57 q14 -4 20 6 q2 12 -8 16 q-12 2 -14 -8 q0 -10 2 -14 Z" fill="#3e8e4f"/>
+          <path d="M82 61 q8 -2 10 6 q-2 8 -10 6 q-6 -4 0 -12 Z" fill="#3e8e4f"/>
           <!-- flame licking the globe -->
-          <path d="M66 78 q-14 -18 -4 -34 q4 8 8 10 q-2 -12 6 -20 q14 16 8 32 q-4 12 -18 12 Z" fill="#f06423"/>
-          <path d="M68 74 q-7 -9 -2 -18 q7 8 5 16 q-1 4 -3 2 Z" fill="#ffd23e"/>
+          <path d="M66 77 q-14 -18 -4 -34 q4 8 8 10 q-2 -12 6 -20 q14 16 8 32 q-4 12 -18 12 Z" fill="#f06423"/>
+          <path d="M68 73 q-7 -9 -2 -18 q7 8 5 16 q-1 4 -3 2 Z" fill="#ffd23e"/>
           <!-- factory -->
           <g fill="#5a5148">
-            <rect x="238" y="58" width="86" height="30"/>
-            <rect x="252" y="30" width="15" height="30"/>
-            <rect x="292" y="22" width="15" height="38"/>
+            <rect x="196" y="58" width="80" height="30"/>
+            <rect x="208" y="30" width="14" height="30"/>
+            <rect x="248" y="22" width="14" height="38"/>
           </g>
           <g fill="#9aa0a3">
-            <circle cx="258" cy="22" r="9"/><circle cx="272" cy="16" r="11"/><circle cx="288" cy="20" r="8"/>
-            <circle cx="300" cy="12" r="9"/><circle cx="312" cy="16" r="7"/>
+            <circle cx="214" cy="22" r="8"/><circle cx="227" cy="16" r="10"/><circle cx="242" cy="20" r="7"/>
+            <circle cx="256" cy="12" r="8"/><circle cx="267" cy="16" r="6"/>
           </g>
           <!-- no-more-smoke slash -->
-          <circle cx="282" cy="18" r="19" fill="none" stroke="#c1272d" stroke-width="5.5"/>
-          <line x1="269" y1="31" x2="295" y2="5" stroke="#c1272d" stroke-width="5.5"/>
+          <circle cx="238" cy="17" r="18" fill="none" stroke="#c1272d" stroke-width="5.5"/>
+          <line x1="226" y1="29" x2="250" y2="5" stroke="#c1272d" stroke-width="5.5"/>
+          <!-- wind turbines -->
+          <g stroke="#4a7a5c" fill="#4a7a5c">
+            <line x1="316" y1="88" x2="316" y2="46" stroke-width="3.5"/>
+            <path d="M316 46 L310 26 L319 42 L334 36 L321 47 L332 58 L318 50 L308 60 L314 48 Z"/>
+            <line x1="356" y1="88" x2="356" y2="56" stroke-width="3"/>
+            <path d="M356 56 L351 40 L358 52 L370 47 L360 57 L369 66 L358 59 L350 67 L355 57 Z"/>
+          </g>
+          <!-- solar panels -->
+          <g>
+            <polygon points="392,88 436,88 428,68 400,68" fill="#2c5f8a"/>
+            <g stroke="#bcd7f0" stroke-width="1.6">
+              <line x1="404" y1="68" x2="398" y2="88"/><line x1="416" y1="68" x2="414" y2="88"/>
+              <line x1="397" y1="78" x2="431" y2="78"/>
+            </g>
+            <line x1="412" y1="88" x2="412" y2="95" stroke="#4a4234" stroke-width="3"/>
+          </g>
           <!-- green down arrow + leaf -->
-          <path d="M388 24 h20 v26 h14 l-24 26 l-24 -26 h14 Z" fill="#2e9e5b"/>
-          <path d="M430 50 q26 -4 32 20 q-26 4 -32 -20 Z" fill="#2e9e5b"/>
-          <line x1="433" y1="67" x2="459" y2="53" stroke="#237a44" stroke-width="2.5"/>
+          <path d="M448 18 h13 v17 h9 l-15 17 l-15 -17 h8 Z" fill="#2e9e5b"/>
+          <path d="M446 62 q20 -3 25 15 q-20 3 -25 -15 Z" fill="#2e9e5b"/>
         </svg>
       </div>
       <div class="cap">
@@ -293,36 +405,46 @@
 
   <!-- BOTTOM: APEC Shenzhen -->
   <section class="panel bottom">
-    <div class="scene" style="height:92px">
+    <div class="scene" style="height:86px">
       <svg viewBox="0 0 400 96" preserveAspectRatio="none">
         <rect x="0" y="0" width="400" height="96" fill="#f3d9a4"/>
-        <circle cx="338" cy="24" r="15" fill="#f6a94f"/>
+        <circle cx="338" cy="22" r="14" fill="#f6a94f"/>
         <!-- skyline -->
         <g fill="#2b2f36">
-          <rect x="0" y="52" width="34" height="44"/><rect x="40" y="40" width="26" height="56"/>
-          <rect x="72" y="58" width="30" height="38"/><rect x="108" y="30" width="20" height="66"/>
-          <rect x="250" y="46" width="30" height="50"/><rect x="286" y="58" width="26" height="38"/>
-          <rect x="318" y="38" width="24" height="58"/><rect x="348" y="54" width="30" height="42"/>
-          <rect x="382" y="44" width="18" height="52"/>
+          <rect x="0" y="52" width="34" height="40"/><rect x="40" y="40" width="26" height="52"/>
+          <rect x="72" y="58" width="30" height="34"/><rect x="108" y="30" width="20" height="62"/>
+          <rect x="250" y="46" width="30" height="46"/><rect x="286" y="58" width="26" height="34"/>
+          <rect x="318" y="38" width="24" height="54"/><rect x="348" y="54" width="30" height="38"/>
+          <rect x="382" y="44" width="18" height="48"/>
         </g>
-        <rect x="196" y="8" width="7" height="88" fill="#2b2f36"/>
-        <polygon points="188,10 212,10 199,26" fill="#2b2f36"/>
+        <g fill="#f3d9a4" opacity="0.85">
+          <rect x="46" y="48" width="4" height="5"/><rect x="56" y="48" width="4" height="5"/>
+          <rect x="46" y="60" width="4" height="5"/><rect x="324" y="46" width="4" height="5"/>
+          <rect x="332" y="58" width="4" height="5"/><rect x="114" y="40" width="4" height="5"/>
+        </g>
+        <rect x="196" y="6" width="7" height="86" fill="#2b2f36"/>
+        <polygon points="188,8 212,8 199,24" fill="#2b2f36"/>
+        <!-- convention centre roofline behind the flags -->
+        <path d="M132 66 Q266 48 372 66 L372 72 L132 72 Z" fill="#4a4234"/>
         <!-- flags -->
         <g>
-          <rect x="146" y="34" width="3.5" height="52" fill="#171310"/>
-          <rect x="150" y="34" width="37" height="24" fill="#ffffff"/>
-          <rect x="150" y="38" width="37" height="4" fill="#c1272d"/><rect x="150" y="46" width="37" height="4" fill="#c1272d"/>
-          <rect x="150" y="54" width="37" height="4" fill="#c1272d"/><rect x="150" y="34" width="16" height="12" fill="#1d4e89"/>
-          <rect x="222" y="34" width="3.5" height="52" fill="#171310"/>
-          <rect x="226" y="34" width="37" height="24" fill="#d42a1e"/>
-          <circle cx="234" cy="42" r="3.4" fill="#f2c230"/>
-          <circle cx="242" cy="39" r="1.7" fill="#f2c230"/><circle cx="244" cy="44" r="1.7" fill="#f2c230"/>
-          <circle cx="243" cy="49" r="1.7" fill="#f2c230"/><circle cx="240" cy="53" r="1.7" fill="#f2c230"/>
-          <rect x="298" y="34" width="3.5" height="52" fill="#171310"/>
-          <rect x="302" y="34" width="37" height="24" fill="#ffffff"/>
-          <rect x="302" y="42" width="37" height="8" fill="#1d4e89"/><rect x="302" y="50" width="37" height="8" fill="#c1272d"/>
+          <rect x="146" y="32" width="3.5" height="54" fill="#171310"/>
+          <rect x="150" y="32" width="37" height="24" fill="#ffffff"/>
+          <rect x="150" y="36" width="37" height="4" fill="#c1272d"/><rect x="150" y="44" width="37" height="4" fill="#c1272d"/>
+          <rect x="150" y="52" width="37" height="4" fill="#c1272d"/><rect x="150" y="32" width="16" height="12" fill="#1d4e89"/>
+          <rect x="222" y="32" width="3.5" height="54" fill="#171310"/>
+          <rect x="226" y="32" width="37" height="24" fill="#d42a1e"/>
+          <circle cx="234" cy="40" r="3.4" fill="#f2c230"/>
+          <circle cx="242" cy="37" r="1.7" fill="#f2c230"/><circle cx="244" cy="42" r="1.7" fill="#f2c230"/>
+          <circle cx="243" cy="47" r="1.7" fill="#f2c230"/><circle cx="240" cy="51" r="1.7" fill="#f2c230"/>
+          <rect x="298" y="32" width="3.5" height="54" fill="#171310"/>
+          <rect x="302" y="32" width="37" height="24" fill="#ffffff"/>
+          <rect x="302" y="40" width="37" height="8" fill="#1d4e89"/><rect x="302" y="48" width="37" height="8" fill="#c1272d"/>
         </g>
-        <rect x="0" y="92" width="400" height="4" fill="#171310"/>
+        <!-- harbour water + boat -->
+        <rect x="0" y="88" width="400" height="8" fill="#2e6da4"/>
+        <path d="M28 84 L64 84 L57 90 L35 90 Z" fill="#8a2f23"/>
+        <rect x="42" y="79" width="10" height="5" fill="#eef1f4"/>
       </svg>
     </div>
     <div class="cap">
@@ -332,7 +454,24 @@
     </div>
   </section>
 
-  <footer>SIX STORIES · FOUR CONTINENTS · ONE DAY &mdash; <b>TUESDAY 17 NOVEMBER 2026</b></footer>
+  <!-- ALSO TODAY: three more fields of the day -->
+  <section class="alsotoday">
+    <div class="at-label">ALSO<br>TODAY</div>
+    <div class="at-item">
+      <span class="at-tag">GLOBAL MARKETS</span>
+      <p>Stocks slide a fourth day in the AI sell-off; Europe&rsquo;s STOXX 600 falls 1.75%, its worst day since March.</p>
+    </div>
+    <div class="at-item">
+      <span class="at-tag">TECHNOLOGY</span>
+      <p>Isomorphic Labs raises $5bn to take its AI-designed drugs into clinical trials.</p>
+    </div>
+    <div class="at-item">
+      <span class="at-tag">SPACE</span>
+      <p>A power-free 50-gram laser mirror keeps dead satellites trackable from the ground, easing the debris threat.</p>
+    </div>
+  </section>
+
+  <footer>NINE STORIES · FOUR CONTINENTS · ONE DAY &mdash; <b>TUESDAY 17 NOVEMBER 2026</b></footer>
 
 </div>
 </body>
